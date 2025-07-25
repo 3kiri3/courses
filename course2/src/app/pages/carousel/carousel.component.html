@@ -1,0 +1,19 @@
+<div class="slider">
+  <button (click)="prev()">&#8592;</button>
+  <div class="carousel">
+    <img 
+  *ngFor="let img of visibleImages; let i = index" 
+  [src]="img" 
+  class="slide-img"
+  (click)="openModal((current + i) % images.length)"
+/>
+  </div>
+  <button (click)="next()">&#8594;</button>
+</div>
+
+<modale
+  *ngIf="isModalOpenLecture"
+  [mode]="'lecture'"
+  [image]="images[current]"
+  (close)="closeModal()">
+</modale>

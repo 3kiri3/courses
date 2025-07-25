@@ -1,0 +1,122 @@
+.liste-container {
+    top : 35%;
+    left : 10%;
+    width: 30%;
+    height: 60%;
+    border : 2px solid black;
+    background-color: lightgoldenrodyellow;
+    position: absolute;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.ligne-rouge {
+    position: absolute;
+    top: 0;
+    left: 10%;
+    width: 2px;
+    height: 100%;
+    background-color: red;
+}
+
+.ligne-noire2 {
+    position: absolute;
+    top: 20%;
+    right: 30%;
+    width: 2px;
+    height: 80%;
+    background-color: black;
+}
+
+.ligne-noire{
+    position: absolute;
+    top: 20%;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: black;
+}
+
+.titre {
+    position: absolute;
+    top: 5%;
+    font-size: 2rem;
+    font-family: "Inria Serif", serif;
+    color: black;
+    text-align: center;
+}
+
+.ingredients {
+    position: absolute;
+    top: 20%;
+    left: 0%;
+    width: 100%;
+    height: 80%;
+    overflow-y: auto;
+    font-size: 1.2rem;
+    font-family: "Inria Serif", serif;
+    color: black;
+    display: flex;
+    flex-direction: column;
+}
+.ingredient{
+    position: relative;
+    padding: 10px 0;
+    height: 10%;
+    border-bottom: 2px solid black;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.checkbox {
+    position : relative;
+    padding: 2.5% ;
+    display: flex;
+    align-items: center;
+
+}
+.checkbox input[type="checkbox"] {
+    position: relative;
+    left: 3%;
+    transform: scale(2);
+    border : 2px solid black;
+    border-radius: 0px;
+}
+
+input[type="checkbox"]:checked + label {
+    text-decoration: line-through;
+    color: gray;
+    background-color: pink;
+}
+
+span{
+    padding : 3%;
+}
+
+.ingredient .nom {
+  width : 70%;
+  text-align: left !important;
+  font-weight: bold;
+  
+}
+
+.ingredient .quantite {
+  width : 20%;
+  text-align: right !important;
+}
+
+.bouton-rouge{
+    position: absolute;
+    bottom: 3%;
+    width: 40%;
+    height: 15%;
+    background-color: rgb(240, 84, 84);
+    border-radius: 14px;
+    font-size: 1.3rem;
+}
+

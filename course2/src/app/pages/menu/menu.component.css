@@ -1,0 +1,58 @@
+.home-container{
+    overflow: hidden !important;
+}
+.bouton-gauche{
+    top : 35%;
+    left: 10% !important;
+    width: 20% !important;
+    height: 10% !important;
+    font-size: 1.5rem !important;
+    text-align: center;
+}
+
+.titre{
+    position: absolute;
+    top: 15%;
+    display: flex;
+    font-size: 6.5rem;
+    font-family: 'Island Moments', sans-serif;
+    color: black;
+
+}
+
+.couverts{
+    position: absolute;
+    bottom: 0%;
+    right: -65%;
+    width: 100%;
+    height: 100%;
+    background-image: url('/assets/couverts.svg');
+    background-repeat: no-repeat;
+    font-size: 1.5rem;
+    font-family: "Inria Serif", serif;
+    z-index: 0;
+}
+.slider2{
+    position : absolute;
+    bottom : 5%;
+    left: 6%;
+}
+
+h2{
+    position: absolute;
+    bottom: 30%;
+    left: 10%;
+    font-size: 4rem;
+    font-family: "Island Moments", sans-serif;
+    font-weight: normal;
+    color: black;
+}
+
+.index{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000; 
+}

@@ -1,0 +1,30 @@
+.slider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  z-index: 0;
+}
+.carousel {
+  display: flex;
+  gap: 1rem;
+}
+.slide-img {
+  width: 25vw;              /* largeur relative à la fenêtre */
+  aspect-ratio: 5 / 3;      /* garde un ratio largeur/hauteur identique */
+  object-fit: cover;
+  border: 2px solid black;
+  box-shadow: 0 2px 8px #0002;
+  max-width: 100%;          /* ne dépasse pas le parent */
+  height: auto;             /* utile si aspect-ratio non supporté */
+}
+button {
+  font-size: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  user-select: none;
+}
+
+
+

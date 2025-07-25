@@ -1,0 +1,23 @@
+<div class="home-container">
+  <div class="navbar">
+    <a routerLink="/home">Home</a>
+    <a routerLink="/menu">Menu</a>
+    <a routerLink="/groceries">Grocery</a>
+  </div>
+  <button class="bouton-gauche" (click)="openModal()">Créer un Menu
+  </button>
+  <div class="titre">MENU</div>
+  
+  <h2 (click)="openModal()">Mes menus</h2>
+  <div class="couverts"></div>
+  <div class="slider2">
+    <app-carousel></app-carousel>
+  </div>
+
+  <modale
+    *ngIf="isModalOpen"
+    [mode]="mode"
+    (close)="isModalOpen = false">
+  </modale>
+
+</div>

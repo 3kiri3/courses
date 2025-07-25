@@ -1,0 +1,57 @@
+.home-container{
+    overflow: hidden !important;
+}
+
+.assiette1{
+    position: absolute;
+    bottom: -1%;
+    right: 20%;
+    width: auto;
+    height: auto;
+    z-index: 1;
+    transform: translateX(500px) rotate(720deg);
+    animation: roulement 2s forwards;
+}
+
+.assiette2{
+    position: absolute;
+    bottom: -1%;
+    right: 0%;
+    width: auto;
+    height: auto;
+    z-index: 0;
+    transform: translateX(500px) rotate(720deg);
+    animation: roulement 2s forwards;
+    animation-delay: 0.4s;
+}
+
+@keyframes roulement {
+  0% {
+    opacity: 1;
+    transform: translateX(500px) rotate(720deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0) rotate(0deg);
+  }
+}
+
+.liste{
+    width: 50%;
+    height: 50%;
+    z-index: 0;
+}
+
+.bibliotheque{
+    position : absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 10%;
+    width: 15%;
+    bottom : 5%;
+    left: 42%;
+    border : 2px solid black;
+    border-radius: 10px;
+}
+

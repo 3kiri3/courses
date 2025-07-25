@@ -1,0 +1,168 @@
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000 !important; 
+}
+
+.modal-content {
+  position: fixed;
+  width: 40%;
+  height: 90%;
+  border : black 2px solid;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.modal-header {
+  width: 100%;
+  height: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.modal-header input[type="text"] {
+  width: auto; 
+  text-align: center; 
+  font-size: 2rem;
+  border: none;
+}
+
+.row{
+  display : flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+/* Premier bloc avec les informations du plat */
+.information {
+  display: flex;
+  width: 100%;
+  height: 30%;
+}
+.col-gauche, .col-droite {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+  margin-bottom: 4px; 
+  font-family: "Inria Serif", serif;
+  flex-direction: column;
+  overflow: hidden;
+  text-align: center;
+
+}
+
+.col-gauche{
+  border-right: 2px solid black;
+}
+
+
+.col-gauche input[type="number"] {
+  width: auto; 
+  text-align: center; 
+}
+
+.col-droite input[type="file"] {
+  max-width: 100%; 
+  height: auto;  
+  cursor: pointer;
+  box-sizing: content-box; /* éviter de prendre toute la largeur */
+}
+
+.col-droite img {
+  max-width: 80%;
+  max-height: 80%;
+  object-fit: cover;
+}
+
+
+
+.row, .ingredient-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+/*colonne principale des ingrédients*/
+.col {
+  flex: 1;
+  width : 80%;
+  margin-bottom: 4px; /*a changer*/
+  overflow-y: auto;
+}
+
+.col .row .col-gauche{
+  border-left : 2px solid black;
+}
+.col .row .col-droite{
+  border-right : 2px solid black;
+  flex-direction: row;
+  padding-right: 2px;
+}
+
+.liste-ingredients{
+  position: relative;
+  display: flex;
+  width: 80%;
+  height: 15%;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.liste-ingredients a{
+  text-decoration: none;
+  color: rgb(76, 75, 78);
+  font-weight: bold;
+  align-self: flex-end;
+  margin-top: auto;
+  margin-bottom: 2%;
+}
+
+
+.boutons{
+  margin-top:auto;
+  display: flex;
+  height : 15%;
+  width: 100%;
+}
+
+.boutons .col-gauche, .boutons .col-droite {
+  margin-bottom : 0px;
+  border-bottom : 0px;
+}
+
+
+
+
+input[type="file"], input[type="text"], input[type="number"] {
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 8px;
+  font-size: 1rem;
+  overflow: hidden;
+  border : 0px;
+
+  &:focus {
+    outline: none;
+    box-shadow: none;
+  }
+}
+
+
+
+

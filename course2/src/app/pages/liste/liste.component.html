@@ -1,0 +1,22 @@
+<div class="liste-container">
+    <div class="ligne-rouge"></div>
+    <div class="ligne-noire2"></div>
+    <div class="ligne-noire"></div>
+
+    <div class="titre">
+        Liste des courses
+    </div>
+
+    <div class="ingredients">
+        <div class="ingredient" *ngFor="let item of listeCombinee">
+            <div class="checkbox">
+                <input type="checkbox" id="ingredient1" [(ngModel)]="item.checked">
+            </div>
+            <span class="nom">{{ item.nom }} :</span>
+            <span class="quantite">{{ item.quantite }} {{ item.unite }}</span>
+        </div>
+    </div>
+
+    <button class="bouton-rouge" (click)="supprimerChecked()">Vider la liste</button>
+
+</div>

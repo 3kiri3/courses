@@ -1,0 +1,88 @@
+
+<div 
+  class="modal-backdrop"
+  (click)="close.emit()"
+>
+  <div class="modal-content" (click)="$event.stopPropagation()">
+    <div class="modal-header">
+      <input *ngIf="mode === 'ajout'" type="text" placeholder="Nom du plat" [(ngModel)]="nomplat">
+      
+      <a class="lecture_" *ngIf="mode === 'lecture'">{{ nomplat }}</a>
+    </div>
+
+
+    <div class="information">
+      <div class="row">
+        <div class="col-gauche">
+          <input *ngIf="mode === 'ajout'" type="number" placeholder="Nombre de personne" min="0" step="1" [(ngModel)]="nombrePersonnes">
+          
+          <a class="lecture_" *ngIf="mode === 'lecture'"> Nombre de personnes</a>
+        </div>
+        <div class="col-droite">
+          <input *ngIf="mode === 'ajout'" type="file" id="imageUpload" accept="image/*" (change)="onFileSelected($event)" [(ngModel)]="urlImage">
+          <img *ngIf="imageToShow" [src]="imageToShow" alt="Image du plat">
+          
+          <a class="lecture_" *ngIf="mode === 'lecture'"> Image du plat</a>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="liste-ingredients">
+      <h2>Liste des ingrédients</h2>
+      <a *ngIf="mode === 'ajout'" (click)="saveIngredient(ingredientNom, ingredientQuantite, unite)">ajouter</a>
+    </div>
+
+
+    <div class="col">
+        <div class="row">
+          <div class="col-gauche">
+            <input  *ngIf="mode === 'ajout'" type="text"  [(ngModel)]="ingredientNom" placeholder="Nom de l'ingrédient">
+            <a class="lecture_" *ngIf="mode === 'lecture'"> Nom de l'ingrédient</a>
+          </div>
+          <div class="col-droite">
+
+
+            <a class="lecture_" *ngIf="mode === 'lecture'"> Quantité</a>
+
+
+              <input  *ngIf="mode === 'ajout'" type="text" [(ngModel)]="ingredientQuantite" placeholder="Quantité">
+              <select  *ngIf="mode === 'ajout'"[(ngModel)]="unite">
+                <option value="g">g</option>
+                <option value="kg">kg</option>
+                <option value="ml">ml</option>
+                <option value="L">L</option>
+                <option value="c.à.s">c.à.s</option>
+                <option value="c.à.c">c.à.c</option>
+                <option value="unité(s)">unité(s)</option>
+              </select>
+          </div> 
+        </div>
+
+
+        <div class="deuxieme">
+          <div *ngFor="let ingredient of ingredients">
+            <div class="boite">
+              <div class="row">
+                <div class="col-gauche">
+                  <p>{{ ingredient.nom}}</p>
+                </div>
+                <div class="col-droite">
+                  <p>{{ingredient.quantite}}</p>
+                </div>
+              </div>
+            </div>  
+        </div>
+      </div>
+    </div>
+
+
+    <div class="boutons" *ngIf="mode === 'ajout'">
+      <div class="row">
+        <div class="col-gauche" (click)="saveRecipe()">Enregistrer</div>
+        <div class="col-droite" (click)="closeModal()">Fermer</div>
+      </div>
+    </div>
+  </div>
+</div>
+
