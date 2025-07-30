@@ -19,7 +19,7 @@
           <a class="lecture_" *ngIf="mode === 'lecture'"> Nombre de personnes</a>
         </div>
         <div class="col-droite">
-          <input *ngIf="mode === 'ajout'" type="file" id="imageUpload" accept="image/*" (change)="onFileSelected($event)" [(ngModel)]="urlImage">
+          <input *ngIf="mode === 'ajout'" type="file" id="imageUpload" accept="image/*" >
           <img *ngIf="imageToShow" [src]="imageToShow" alt="Image du plat">
           
           <a class="lecture_" *ngIf="mode === 'lecture'"> Image du plat</a>
@@ -30,14 +30,14 @@
 
     <div class="liste-ingredients">
       <h2>Liste des ingrédients</h2>
-      <a *ngIf="mode === 'ajout'" (click)="saveIngredient(ingredientNom, ingredientQuantite, unite)">ajouter</a>
+      <a *ngIf="mode === 'ajout'" >ajouter</a>
     </div>
 
 
     <div class="col">
         <div class="row">
           <div class="col-gauche">
-            <input  *ngIf="mode === 'ajout'" type="text"  [(ngModel)]="ingredientNom" placeholder="Nom de l'ingrédient">
+            <input  *ngIf="mode === 'ajout'" type="text"  >
             <a class="lecture_" *ngIf="mode === 'lecture'"> Nom de l'ingrédient</a>
           </div>
           <div class="col-droite">
@@ -79,8 +79,8 @@
 
     <div class="boutons" *ngIf="mode === 'ajout'">
       <div class="row">
-        <div class="col-gauche" (click)="saveRecipe()">Enregistrer</div>
-        <div class="col-droite" (click)="closeModal()">Fermer</div>
+        <div class="col-gauche" >Enregistrer</div>
+        <div class="col-droite" >Fermer</div>
       </div>
     </div>
   </div>

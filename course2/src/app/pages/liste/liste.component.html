@@ -8,15 +8,15 @@
     </div>
 
     <div class="ingredients">
-        <div class="ingredient" *ngFor="let item of listeCombinee">
+        <div class="ingredient" >
             <div class="checkbox">
-                <input type="checkbox" id="ingredient1" [(ngModel)]="item.checked">
+                <input type="checkbox" id="ingredient1" >
             </div>
-            <span class="nom">{{ item.nom }} :</span>
-            <span class="quantite">{{ item.quantite }} {{ item.unite }}</span>
+            <span class="nom"></span>
+            <span class="quantite"></span>
         </div>
     </div>
 
-    <button class="bouton-rouge" (click)="supprimerChecked()">Vider la liste</button>
+    <button class="bouton-rouge">Vider la liste</button>
 
 </div>

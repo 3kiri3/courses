@@ -2,6 +2,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: row;
   gap: 1rem;
   z-index: 0;
 }
@@ -10,14 +11,15 @@
   gap: 1rem;
 }
 .slide-img {
-  width: 25vw;              /* largeur relative à la fenêtre */
-  aspect-ratio: 5 / 3;      /* garde un ratio largeur/hauteur identique */
+  width: 25vw;              
+  aspect-ratio: 5 / 3;      
   object-fit: cover;
   border: 2px solid black;
   box-shadow: 0 2px 8px #0002;
-  max-width: 100%;          /* ne dépasse pas le parent */
-  height: auto;             /* utile si aspect-ratio non supporté */
+  max-width: 100%;          
+  height: auto;             
 }
+
 button {
   font-size: 2rem;
   background: none;

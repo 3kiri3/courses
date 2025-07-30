@@ -1,6 +1,6 @@
 import { ApplicationConfig, provideZoneChangeDetection } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { provideHttpClient } from '@angular/common/http';
+import { provideHttpClient, withFetch } from '@angular/common/http';
 import { provideRouter } from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
 import { MenuComponent } from './pages/menu/menu.component';
@@ -22,6 +22,6 @@ export const appConfig: ApplicationConfig = {
       { path: 'groceries', component: GroceriesComponent }
     ]),
     FormsModule,
-    provideHttpClient(),
+    provideHttpClient(withFetch()),
   ]
 };

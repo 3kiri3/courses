@@ -1,5 +1,6 @@
 .home-container{
     overflow: hidden !important;
+    background-color:  #F6F3EE !important;
 }
 .bouton-gauche{
     top : 35%;
@@ -33,9 +34,10 @@
     z-index: 0;
 }
 .slider2{
-    position : absolute;
-    bottom : 5%;
-    left: 6%;
+    position: absolute;
+    top : 50%;
+    width : 80%;
+    overflow: hidden;
 }
 
 h2{

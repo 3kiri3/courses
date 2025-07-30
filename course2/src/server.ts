@@ -14,7 +14,7 @@ const browserDistFolder = resolve(serverDistFolder, '../browser');
 
 const app = express();
 app.use(cors({
-  origin: 'http://localhost:4200', // autorise les requêtes depuis Angular
+  origin: 'http://localhost:4200', 
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type']
 }));
